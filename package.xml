@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<package>
+    <name>Stetic_Ecommerce_Analytics</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>GNU General Public License (GPL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Adds real-time Web &amp; Ecommerce Analytics from Stetic with event tracking of all important actions to Magento.</summary>
+    <description>With this extenstion you can add the powerful Web and Ecommerce Analytics from &lt;a href="http://www.stetic.com/"&gt;Stetic&lt;/a&gt; to your Magento store. &#xD;
+It will integrate the tracking code to track pageviews and all actions a visitor or customer will take. Logged-in users will be identified and pushed to Stetic for further analysis.&#xD;
+You can enable or disable all individual events in the extension settings.&lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+Stetic offers a stunning Ecommerce dashboard to monitor the performance of your online store with all important numbers at a glance. &lt;br&gt;&#xD;
+&#xD;
+&lt;br&gt;&#xD;
+&lt;a href="https://www.stetic.com/ecommerce/"&gt;&lt;img src="https://www.stetic.com/img/features/ecommerce/dashboard_en.png" alt="Ecommerce Dashboard"&gt;&lt;/a&gt;&lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+Learn how successful your shopping cart is.&lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+&lt;a href="https://www.stetic.com/ecommerce/"&gt;&lt;img src="https://www.stetic.com/img/features/ecommerce/cart_1_en.png" alt="Shopping cart Abandonment Rate"&gt;&lt;/a&gt;&lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+&lt;a href="https://www.stetic.com/ecommerce/"&gt;&lt;img src="https://www.stetic.com/img/features/ecommerce/cart_2_en.png" alt="Time to cart and time to order"&gt;&lt;/a&gt;&lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+Customer Profiles - instead of visitors and sessions. Connect your magento customers with your web analytics.&lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+&lt;a href="https://www.stetic.com/ecommerce/"&gt;&lt;img src="https://www.stetic.com/img/features/ecommerce/user-profile_en.png" alt="Time to cart and time to order"&gt;&lt;/a&gt;&lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+..and many more features.&#xD;
+&lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+Event Tracking - the following actions can be tracked with this extension:&lt;br&gt;&#xD;
+- Shopping Cart actions&lt;br&gt;&#xD;
+- Orders&lt;br&gt;&#xD;
+- Wishlist actions&lt;br&gt;&#xD;
+- Send Friend&lt;br&gt;&#xD;
+- Search&lt;br&gt;&#xD;
+- Contact form&lt;br&gt;&#xD;
+- Newsletter&lt;br&gt;&#xD;
+- Product review&lt;br&gt;&#xD;
+- Product compare&lt;br&gt;&#xD;
+- Account creation&lt;br&gt;&#xD;
+- Login and Logout&lt;br&gt;&#xD;
+- Account actions&lt;br&gt;&#xD;
+- Forgot Password&lt;br&gt;&#xD;
+- 404 page Not Found&lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+Note: You have to be registered with Stetic to use this extension.&#xD;
+</description>
+    <notes>First release</notes>
+    <authors><author><name>Stetic</name><user>stetic</user><email>hello@stetic.com</email></author></authors>
+    <date>2014-11-01</date>
+    <time>14:30:28</time>
+    <contents><target name="magecommunity"><dir name="Stetic"><dir name="Analytics"><dir name="Block"><file name="Tracker.php" hash="bcd7ea404180d2495de429d1fdbde0de"/></dir><dir name="Helper"><file name="Data.php" hash="27026fd1fc808957990cdf61d3f40546"/></dir><dir name="Model"><file name="Observer.php" hash="9da89427ebb23bd0c940cbaf7e3eb761"/></dir><dir name="etc"><file name="config.xml" hash="e14bbc66c6cda199f9b8860bec47c6c2"/><file name="system.xml" hash="cea891cadc2e523579829773f1ed71b0"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="stetic"><file name="onepage.phtml" hash="50be5876eb8f853f528ff5e2799fbee6"/><file name="tracker.phtml" hash="9f89660d790cf7f4f2c6248a7d02b874"/></dir></dir><dir name="layout"><file name="stetic.xml" hash="8d83bec15d00c5d090ad99a765ce574f"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Stetic_Analytics.xml" hash="6452040fe0a72ee45695013a3796f271"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

@@ -1,0 +1,15 @@
+<?php 
+if( $this->isOrderTrackingEnabled() )
+{ ?>
+<script type="text/javascript">
+  Checkout.prototype.gotoSection = Checkout.prototype.gotoSection.wrap(function(parentMethod, section, reloadProgressBlock) {
+    parentMethod(section, reloadProgressBlock);
+    try {
+		if(section == '') {
+			section = 'billing';
+		}
+		stetic.track('checkout_' + section);
+    } catch(err) { }
+  });
+</script>
+<?php } ?>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Stetic Analytics Magento Extension
+ *
+ * @category    Stetic
+ * @package     Stetic_Analytics
+ * @copyright   Copyright (c) 2014 Stetic (http://www.stetic.com/)
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
+ */
+-->
+<layout>
+    <default>
+        <reference name="head">
+            <block type="Stetic/tracker" name="Stetic" as="Stetic" template="stetic/tracker.phtml"/>
+        </reference>
+    </default>
+    <sales_order_print>
+        <reference name="head">
+            <block type="Stetic/tracker" name="Stetic" as="Stetic" template="stetic/tracker.phtml"/>
+        </reference>
+    </sales_order_print>
+    <checkout_onepage_index>
+        <reference name="before_body_end">
+            <block type="Stetic/tracker" name="SteticCheckout" as="SteticCheckout" template="stetic/onepage.phtml"/>
+        </reference>
+    </checkout_onepage_index>
+</layout>

@@ -38,7 +38,7 @@ class Stetic_Analytics_Model_Observer extends Varien_Event_Observer
         "wishlist_index_remove",
         "wishlist_index_cart",
         "wishlist_index_update",
-		"sendfriend_product_sendmail",
+        "sendfriend_product_sendmail",
         "catalog_product_compare_add",
         "catalog_product_compare_remove",
         "catalogsearch_result_index",
@@ -60,21 +60,21 @@ class Stetic_Analytics_Model_Observer extends Varien_Event_Observer
         
         if(in_array($action, $this->trigger_actions))
         {
-			$trigger = array("action" => $action, "request" => $request);
-			
-			if($action == 'checkout_cart_delete')
-			{
-				$item = Mage::getModel('checkout/cart')->getQuote()->getItemById($request['id']);
-				$trigger['product_id'] = $item->getProduct()->getId();
-				$trigger['options'] = $item->getProduct()->getTypeInstance(true)->getOrderOptions($item->getProduct());
-				$trigger['quantity'] = $item->getQty();
-			}
-			elseif($action == 'wishlist_index_remove' || $action == 'wishlist_index_cart')
-			{
-				$trigger['product_id'] = Mage::getModel('wishlist/item')->load($request['item'])->getProduct()->getId();
-			}
-			
-			$this->_addTrigger($trigger);
+            $trigger = array("action" => $action, "request" => $request);
+            
+            if($action == 'checkout_cart_delete')
+            {
+                $item = Mage::getModel('checkout/cart')->getQuote()->getItemById($request['id']);
+                $trigger['product_id'] = $item->getProduct()->getId();
+                $trigger['options'] = $item->getProduct()->getTypeInstance(true)->getOrderOptions($item->getProduct());
+                $trigger['quantity'] = $item->getQty();
+            }
+            elseif($action == 'wishlist_index_remove' || $action == 'wishlist_index_cart')
+            {
+                $trigger['product_id'] = Mage::getModel('wishlist/item')->load($request['item'])->getProduct()->getId();
+            }
+            
+            $this->_addTrigger($trigger);
         }
     }
     
@@ -92,39 +92,39 @@ class Stetic_Analytics_Model_Observer extends Varien_Event_Observer
             'request' => $data,
         ));
     }
-	
+    
     /**
      * Newsletter Subscriber Save After Observer
      *
      * @param Varien_Event_Observer $observer
      */
-	public function newsletterSubscriberSaveAfter(Varien_Event_Observer $observer)
-	{
-		$event = $observer->getEvent();
-		$subscriber = $event->getDataObject();
-		$data = $subscriber->getData();
-		
-		$this->_addTrigger(array(
-			'action' => 'newsletterSubscriberSaveAfter',
-			'request' => $data,
-			'status_change' => $subscriber->getIsStatusChanged(),
-		));
-	}
-	
+    public function newsletterSubscriberSaveAfter(Varien_Event_Observer $observer)
+    {
+        $event = $observer->getEvent();
+        $subscriber = $event->getDataObject();
+        $data = $subscriber->getData();
+        
+        $this->_addTrigger(array(
+            'action' => 'newsletterSubscriberSaveAfter',
+            'request' => $data,
+            'status_change' => $subscriber->getIsStatusChanged(),
+        ));
+    }
+    
     /**
      * Adds a trigger
      *
      * @param array $trigger
      */
-	private function _addTrigger($trigger)
-	{
-		$existing_triggers = Mage::getSingleton('core/session')->getData('stetic_event_trigger');
-		if(!$existing_triggers)
-		{
-			$existing_triggers = array();
-		}
-		$existing_triggers[] = $trigger;
-		
+    private function _addTrigger($trigger)
+    {
+        $existing_triggers = Mage::getSingleton('core/session')->getData('stetic_event_trigger');
+        if(!$existing_triggers)
+        {
+            $existing_triggers = array();
+        }
+        $existing_triggers[] = $trigger;
+        
         Mage::getSingleton('core/session')->setData('stetic_event_trigger', $existing_triggers);
-	}
+    }
 }

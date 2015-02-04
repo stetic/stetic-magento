@@ -289,7 +289,7 @@ class Stetic_Analytics_Block_Tracker extends Mage_Core_Block_Template
                 /***
                 * Checkout success
                 */
-                elseif( ($action == 'checkout_onepage_saveOrder' || $action == 'checkout_multishipping_success' || $action == 'checkoutMultishippingControllerSuccessAction') && $this->isOrderTrackingEnabled() )
+                elseif( ($action == 'checkout_onepage_saveOrder' || $action == 'checkout_onepage_savePayment' || $action == 'checkout_multishipping_success' || $action == 'checkoutMultishippingControllerSuccessAction') && $this->isOrderTrackingEnabled() )
                 {
                     $orderIds = array();
                     /***

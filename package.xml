@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Stetic_Ecommerce_Analytics</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <stability>stable</stability>
     <license>GNU General Public License (GPL)</license>
     <channel>community</channel>
@@ -58,11 +58,11 @@ The following actions can be tracked with this extension:&lt;br /&gt;&#xD;
 &lt;br /&gt;&#xD;
 &lt;br /&gt;&#xD;
 Note: You have to be registered with &lt;a href="https://www.stetic.com/?fs_campaign=Magento&amp;amp;fs_source=Extensions&amp;amp;fs_medium=link"&gt;Stetic&lt;/a&gt; to use this extension.</description>
-    <notes>Added support for Firecheckout</notes>
+    <notes>Bugfix: Removed order Event on checkout_onepage_savePayment trigger</notes>
     <authors><author><name>Stetic</name><user>stetic</user><email>hello@stetic.com</email></author></authors>
     <date>2016-01-26</date>
-    <time>16:02:09</time>
-    <contents><target name="magecommunity"><dir name="Stetic"><dir name="Analytics"><dir name="Block"><file name="Tracker.php" hash="615fb5b2597d706e337736b0b30fbc2e"/></dir><dir name="Helper"><file name="Data.php" hash="27026fd1fc808957990cdf61d3f40546"/></dir><dir name="Model"><file name="Observer.php" hash="69e2315d07a926a53bdc5c46804b5a6c"/></dir><dir name="etc"><file name="config.xml" hash="e14bbc66c6cda199f9b8860bec47c6c2"/><file name="system.xml" hash="88c02ff7dbcaddab259f14cb657c0395"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="stetic"><file name="onepage.phtml" hash="584772b48c2b868fba0aa4efc1fdf92c"/><file name="tracker.phtml" hash="9f89660d790cf7f4f2c6248a7d02b874"/></dir></dir><dir name="layout"><file name="stetic.xml" hash="8d83bec15d00c5d090ad99a765ce574f"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Stetic_Analytics.xml" hash="6452040fe0a72ee45695013a3796f271"/></dir></target></contents>
+    <time>18:16:56</time>
+    <contents><target name="magecommunity"><dir name="Stetic"><dir name="Analytics"><dir name="Block"><file name="Tracker.php" hash="a7a4e19ea5022d9930bebf893beb1535"/></dir><dir name="Helper"><file name="Data.php" hash="27026fd1fc808957990cdf61d3f40546"/></dir><dir name="Model"><file name="Observer.php" hash="69e2315d07a926a53bdc5c46804b5a6c"/></dir><dir name="etc"><file name="config.xml" hash="e14bbc66c6cda199f9b8860bec47c6c2"/><file name="system.xml" hash="88c02ff7dbcaddab259f14cb657c0395"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="stetic"><file name="onepage.phtml" hash="584772b48c2b868fba0aa4efc1fdf92c"/><file name="tracker.phtml" hash="9f89660d790cf7f4f2c6248a7d02b874"/></dir></dir><dir name="layout"><file name="stetic.xml" hash="8d83bec15d00c5d090ad99a765ce574f"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Stetic_Analytics.xml" hash="6452040fe0a72ee45695013a3796f271"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

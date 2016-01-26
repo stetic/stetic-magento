@@ -98,7 +98,7 @@ class Stetic_Analytics_Block_Tracker extends Mage_Core_Block_Template
                         $disabled_countries = explode(",", self::getConfig('advanced/identify_loggedin_disallow_specificcountry'));
                         if(!empty($disabled_countries) && $address->getCountryId() && in_array($address->getCountryId(), $disabled_countries))
                         {
-                               //self::log("Disabled country " . $address->getCountryId(), null, 'stetic.log');
+                            //self::log("Disabled country " . $address->getCountryId(), null, 'stetic.log');
                             return '';
                         }
                     }
@@ -290,12 +290,12 @@ class Stetic_Analytics_Block_Tracker extends Mage_Core_Block_Template
                 * Checkout success
                 */
                 elseif( ($action == 'checkout_onepage_saveOrder' || 
-                            $action == 'checkout_onepage_savePayment' || 
-                            $action == 'checkout_multishipping_success' || 
-                            $action == 'checkoutMultishippingControllerSuccessAction' || 
-                            $action == 'firecheckout_index_saveOrder') && $this->isOrderTrackingEnabled() )
+                         $action == 'checkout_multishipping_success' || 
+                         $action == 'checkoutMultishippingControllerSuccessAction' || 
+                         $action == 'firecheckout_index_saveOrder') && $this->isOrderTrackingEnabled() )
                 {
                     $orderIds = array();
+                    
                     /***
                      * Multishipping can have more than one id
                      */

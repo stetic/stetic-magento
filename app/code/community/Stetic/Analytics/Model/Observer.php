@@ -23,6 +23,7 @@ class Stetic_Analytics_Model_Observer extends Varien_Event_Observer
         "checkout_onepage_index",
         "checkout_onepage_savePayment",
         "checkout_onepage_saveOrder",
+        "firecheckout_index_saveOrder",
         "checkout_multishipping_success",
         "sales_order_reorder",
         "sales_order_print",
